@@ -132,8 +132,21 @@ This repository would not be possible without the help of the following people:
 1. Open the `folder`.
 1. Open the `8088 Assembler and Simulator` folder.
 1. Now, you can use the [8088](https://en.wikipedia.org/wiki/Intel_8088) Assembler and Simulator `DOSBOX`.
-
-
+---
+# 💭 Logic Building and Problem Solving with Assembly Language:
+### Common Mistakes:
+- Many people start writing code without thinking about the logic.
+- They just start writing code.
+- My **advice** is that you should first think about the logic on **paper**, make an **algorithm** and then start writing code. 
+### Logic Building:
+- If you are completely **stuck** on a problem and didn't think about the logic, then first write the code in the high level language like `Python` or `C/C++` and then convert it into assembly language.
+- If you are unable to convert that `high level langauge` code into `assembly language` code, then use the [compiler explorer](https://godbolt.org/z/6oaTnh8nz) to convert it into assembly language code.
+### Resolving Errors:
+- If you get an unkown error, then first try to understand that error.
+- Use assembly language debugger to debug your code.
+- Debug your code `line by line`.
+- If this doesn't work, then try taking help from your friends, seniors, teachers, etc. 
+- Also if you are good at this then try helping your friends, juniors in solving their problems.
 ---
 # 💖 Sponsorship:
 - Currently, we are not accepting any sponsership. But, if you want to sponsor this project, then you can contact us at [Mahad](https://github.com/DrMahad/).
