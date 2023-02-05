@@ -96,8 +96,12 @@ This repository would not be possible without the help of the following people:
 
 - Then you can use [8088](https://en.wikipedia.org/wiki/Intel_8088) assembly language. The offical documentation of [8088](https://en.wikipedia.org/wiki/Intel_8088) assembly language is available [here](https://www.cs.virginia.edu/~evans/cs216/guides/x86.html).
 
+#### If you want to write assembly language for [Apple ARM architecture](https://www.apple.com/newsroom/2020/11/apple-unleashes-m1/)
 
+- The official documentation of ARM architecture is available [here](https://developer.arm.com/documentation).
 
+- Then you can use Apple ARM assembly language. The offical documentation of Apple ARM assembly language is available [here](https://developer.apple.com/documentation/xcode/writing-arm64-code-for-apple-platforms).
+- There is cool GitHub repository for Apple ARM assembly language. The GitHub repository is available [here](https://github.com/below/HelloSilicon).
 ---
 
 ### 📺 8088 Assembly Language Tutorials:
@@ -120,6 +124,32 @@ This repository would not be possible without the help of the following people:
 ---
 # 🛠️ Setup and Installation of [8088](https://en.wikipedia.org/wiki/Intel_8088) Assembler and Simulator:
 
+> The procedure is same for major operating systems like `Windows`, `Linux`, `MacOS`, etc.
+- Download the DOSBOX from the following link:
+
+    - [DOSBOX](https://www.dosbox.com/download.php?main=1)
+
+    - On debian based linux distributions like `ubuntu`, you can install the `DOSBOX` using the following command:
+        ```bash
+        sudo apt install dosbox
+        ```
+
+        - Or, you can install the fork of `DOSBOX` project `DOSBox-X`, (which was mainatined by [Snapcrafters community](https://snapcraft.io/publisher/snapcrafters)) using the following command:
+            ```bash
+            sudo apt install dosbox-x
+            ```
+
+    - If you are on `Windows`, then you can install the `DOSBOX` using the following command from `PowerShell` or `Command Prompt` as `Administrator` using [Chocolatey](https://chocolatey.org/) package manager:
+        ```bash
+        choco install dosbox
+        ```
+        
+    - If you are on `MacOS`, then you can install the `DOSBOX` using the following command from `Terminal` using [Homebrew](https://brew.sh/) ( free and open-source software package management system for macOS and Linux):
+        ```bash
+        brew install dosbox
+        ```
+#### Then you can use the following procedure to use the [8088](https://en.wikipedia.org/wiki/Intel_8088) Assembler and Simulator:
+
 1. [8088](https://en.wikipedia.org/wiki/Intel_8088) Assembler and Simulator is available [here](https://drive.google.com/file/d/16rATc7y1x0Xw1V6MEip7waSMP316dxmy/view?usp=sharing).
 
 1. Otherwise, If you have `git` installed, then you can clone the repository using the following command:
@@ -136,20 +166,24 @@ This repository would not be possible without the help of the following people:
 # 💭 Logic Building and Problem Solving with Assembly Language:
 ### Common Mistakes:
 - Many people start writing code without thinking about the logic.
+
 - They just start writing code.
 - My **advice** is that you should first think about the logic on **paper**, make an **algorithm** and then start writing code. 
 ### Logic Building:
 - If you are completely **stuck** on a problem and didn't think about the logic, then first write the code in the high level language like `Python` or `C/C++` and then convert it into assembly language.
+
 - If you are unable to convert that `high level langauge` code into `assembly language` code, then use the [compiler explorer](https://godbolt.org/z/6oaTnh8nz) to convert it into assembly language code.
 ### Resolving Errors:
 - If you get an unkown error, then first try to understand that error.
 - Use assembly language debugger to debug your code.
+
 - Debug your code `line by line`.
 - If this doesn't work, then try taking help from your friends, seniors, teachers, etc. 
 - Also if you are good at this then try helping your friends, juniors in solving their problems.
 ---
 # 💖 Sponsorship:
 - Currently, we are not accepting any sponsership. But, if you want to sponsor this project, then you can contact us at [Mahad](https://github.com/DrMahad/).
+
 - Just pray for us and my contributors. And, we will be thankful to you.
 ---
 # 📜 License:
