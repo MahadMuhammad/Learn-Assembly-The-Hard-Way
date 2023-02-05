@@ -143,7 +143,11 @@ This repository would not be possible without the help of the following people:
         ```bash
         choco install dosbox
         ```
-        
+        - Or you can use [winget-cli](https://github.com/microsoft/winget-cli) package manager:
+            ```bash
+            winget install -e --id DOSBox.DOSBox
+            ```
+
     - If you are on `MacOS`, then you can install the `DOSBOX` using the following command from `Terminal` using [Homebrew](https://brew.sh/) ( free and open-source software package management system for macOS and Linux):
         ```bash
         brew install dosbox
