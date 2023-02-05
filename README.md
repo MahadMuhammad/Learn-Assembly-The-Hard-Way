@@ -104,11 +104,12 @@ This repository would not be possible without the help of the following people:
 - There is cool GitHub repository for Apple ARM assembly language. The GitHub repository is available [here](https://github.com/below/HelloSilicon).
 ---
 
-### 📺 8088 Assembly Language Tutorials:
+# 📺 8088 Assembly Language Video Tutorials:
 
-- [Assembly Language Tutorials for Beginners in Urdu and Hindi by Mr Belal Hashmi](https://www.youtube.com/playlist?list=PLKyB9RYzaFRh9pYhDsTGXnDqRx0YZQFbn)
-- [Computer Organization & Assembly Language](https://youtube.com/playlist?list=PLnd7R4Mcw3rJCvAduQxyySvejtBIaPs0O)
-- [Assembly Language programming tutorial 8086 in hindi learn](https://youtube.com/playlist?list=PLAZj-jE2acZLdYT7HLFgNph190z2cjmAG)
+- Belal Hashmi video lectures available [here](https://www.youtube.com/playlist?list=PLKyB9RYzaFRh9pYhDsTGXnDqRx0YZQFbn).
+
+- Video lectures of [Mohammad Nauman](https://github.com/recluze) availabe [here](https://youtube.com/playlist?list=PLnd7R4Mcw3rJCvAduQxyySvejtBIaPs0O).
+- Video lectures by Malik Shahzaib available [here](https://youtube.com/playlist?list=PLAZj-jE2acZLdYT7HLFgNph190z2cjmAG).
 
 
 ---
@@ -119,8 +120,14 @@ This repository would not be possible without the help of the following people:
 
 [![Mr Belal Hashmi Lectures](https://i.imgur.com/aRVAaXZ_d.webp?maxwidth=1520&fidelity=grand)](https://www.youtube.com/playlist?list=PLKyB9RYzaFRh9pYhDsTGXnDqRx0YZQFbn "Everything Is AWESOME") -->
 
-[![Mr Belal Hashmi](https://lh3.googleusercontent.com/drive-viewer/AFDK6gMB8jOi8GwQQ6LqH7FdElY6PsVRirtZfxO4NJ6HCbZu9sARR5E61obU9dwWnLppZOMLV--yh7-WXFjESKhn0YoEExdetA=w1920-h932)](https://www.youtube.com/playlist?list=PLKyB9RYzaFRh9pYhDsTGXnDqRx0YZQFbn "Everything Is AWESOME")
+[![Mr Belal Hashmi](https://lh3.googleusercontent.com/drive-viewer/AFDK6gMB8jOi8GwQQ6LqH7FdElY6PsVRirtZfxO4NJ6HCbZu9sARR5E61obU9dwWnLppZOMLV--yh7-WXFjESKhn0YoEExdetA=w1920-h932)](https://www.youtube.com/playlist?list=PLKyB9RYzaFRh9pYhDsTGXnDqRx0YZQFbn "Click me to view: PlayList of video lectures by Belal hasmi")
 
+## 📚 Book for 8088 Assembly Language:
+
+1. **Handbook** of Belal Hashmi available [here](https://drive.google.com/file/d/1NYdo4t-VM1D8cc_QH5NnkwxtMPFVBoRu/view?usp=sharing).
+1. [**Assembly Language for x86 Processors**](http://www.asmirvine.com/) by Kip R. Irvine.
+1. **Assembly language step by step** by Jeff Duntemann.
+1. **Computer organization and Architecture** by William Stallings.
 ---
 # 🛠️ Setup and Installation of [8088](https://en.wikipedia.org/wiki/Intel_8088) Assembler and Simulator:
 
