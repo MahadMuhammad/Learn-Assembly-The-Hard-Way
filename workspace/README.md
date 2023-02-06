@@ -16,6 +16,9 @@ nasm hello.asm -o hello.com -l hello.lst
 ```bash
 hello.com
 ```
-
+5. *(Optional)* You can debug the code `line by line` by running the following command:
+```bash
+afd hello.com
+```
 # Output:
-- Hello World! is printed on the screen.
+- **Hello World!** is printed on the screen. 😀
