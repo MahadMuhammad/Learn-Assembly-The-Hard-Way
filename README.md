@@ -1,5 +1,5 @@
 <p align="middle">
-<a href="https://github.com/DrMahad"><img alt="views" title="Github views" src="https://komarev.com/ghpvc/?username=DrMahad&style=flat-circle" width="125"/></a>
+<a href="https://github.com/MahadMuhammad"><img alt="views" title="Github views" src="https://komarev.com/ghpvc/?username=MahadMuhammad&style=flat-circle" width="125"/></a>
 
 ![](https://img.shields.io/badge/Welcome%20to-blue.svg)
 ![Welcome Badge](https://img.shields.io/badge/Mahad's%20Intel%208080-blue.svg)
@@ -165,7 +165,7 @@ This repository would not be possible without the help of the following people:
 
 1. Otherwise, If you have `git` installed, then you can clone the repository using the following command:
     ```bash
-    git clone https://github.com/DrMahad/Learn-Assembly-The-Hard-Way.git
+    git clone https://github.com/MahadMuhammad/Learn-Assembly-The-Hard-Way.git
     ```
 1. Or, you can download the zip file from the GitHub repository main page.
 1. Extract the zip file.
@@ -193,12 +193,12 @@ This repository would not be possible without the help of the following people:
 - Also if you are good at this then try helping your friends, juniors in solving their problems.
 ---
 # 💖 Sponsorship:
-- Currently, we are not accepting any sponsership. But, if you want to sponsor this project, then you can contact us at [Mahad](https://github.com/DrMahad/).
+- Currently, we are not accepting any sponsership. But, if you want to sponsor this project, then you can contact us at [Mahad](https://github.com/MahadMuhammad/).
 
 - Just pray for us and my contributors. And, we will be thankful to you.
 ---
 # 📜 License:
-- This project is licensed under the [MIT License](https://github.com/DrMahad/Learn-Assembly-The-Hard-Way/blob/main/LICENSE)
+- This project is licensed under the [MIT License](https://github.com/MahadMuhammad/Learn-Assembly-The-Hard-Way/blob/main/LICENSE)
 
 ---
 
