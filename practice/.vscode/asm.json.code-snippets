@@ -1,0 +1,16 @@
+{
+	"Mahad IAPX88": {
+		"prefix": "asm",
+		"body": [
+		"[org 0x0100]",
+		"	jmp start",
+		"   ",
+		"start:",
+		"	$0",
+		"   ",
+		"mov ax, 0x4c00", 
+		"int 21h",
+		],
+		"description": "C++ Snippet"
+	}
+}

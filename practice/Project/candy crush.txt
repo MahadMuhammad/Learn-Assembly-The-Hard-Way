@@ -1,0 +1,544 @@
+ [org 0x0100]
+jmp start
+;mes1: db '        '
+;len1: dw 9
+mes1: db ' |#| '
+len1: dw 5
+col: dw 24
+row: dw 8
+lives :dw 'REMAINING LIVES : 17'
+liveslen :dw 20
+intro:dw 'CANDY CRUSH MADE BY '
+intolen:dw 20
+name :dw' ABDUL WASAY '
+namelen: dw 13
+;obj5b :dw'----'
+;len5b:dw 4
+over :dw 'THE GAME IS OVER '
+overlen:dw 17
+muli:
+push cx
+push bx
+push ax
+
+add dx,ax
+mov ax,dx
+mov bx,10
+mul bx
+mov dx,ax
+
+pop ax
+pop bx
+pop cx
+ret
+
+input:
+mov ax,0
+mov ah,0x1
+int 0x21
+sub al,0x30
+mov ah,0
+
+ret
+chng:
+push bp
+mov bp, sp
+push es
+push ax
+push cx
+push dx
+push si
+push di
+
+mov ax, 0xb800
+mov es, ax
+
+mov ax,0
+mov al, 80
+mul byte [bp+4]
+
+add ax, [bp+6]
+shl ax, 1
+add ax,4
+mov di,ax
+mov dx,[es:di]
+mov cx,dx
+
+
+mov ax,0
+mov al, 80
+mul byte [bp+8]
+
+add ax, [bp+10]
+shl ax, 1
+add ax,4
+mov di,ax
+mov dx,[es:di]
+
+mov ax,[bp+10]
+push ax
+mov ax,[bp+8]
+push ax
+
+
+shr cx,8
+push cx
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax,[bp+6]
+push ax
+mov ax,[bp+4]
+push ax
+
+
+shr dx,8
+push dx
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+
+
+pop di
+pop si
+pop dx
+pop cx
+pop ax
+pop es
+pop bp
+ret 8
+
+movement:
+move:
+mov bl,4
+mov cl,2
+call input
+dec ax
+mul bl
+add ax,[col]
+
+push ax
+
+mov ah,0x1
+int 0x21
+call input
+dec ax
+mul cl
+add ax,[row]
+push ax
+
+mov ah,0x1
+int 0x21
+call input
+dec ax
+mul bl
+add ax,[col]
+
+push ax
+
+mov ah,0x1
+int 0x21
+call input
+dec ax
+mul cl
+add ax,[row]
+push ax
+
+call chng
+mov ah,0x1
+int 0x21
+jmp move
+
+ret
+clrscr:
+push es
+push ax
+push di
+mov ax, 0xb800
+mov es, ax
+mov di, 0
+nextloc:
+mov word [es:di], 0x0720
+add di, 2
+cmp di, 4000
+jne nextloc
+pop di
+pop ax
+pop es
+ret
+printstr:
+push bp
+mov bp, sp
+push es
+push ax
+push cx
+push si
+push di
+mov ax, 0xb800
+mov es, ax
+mov al, 80
+mul byte [bp+10]
+
+add ax, [bp+12]
+shl ax, 1
+mov di,ax
+mov si, [bp+6]
+mov cx, [bp+4]
+mov ah, [bp+8]
+nextchar: mov al, [si]
+mov [es:di], ax
+add di, 2
+add si, 1
+loop nextchar
+pop di
+pop si
+pop cx
+pop ax
+pop es
+pop bp
+ret 10
+start:
+call clrscr
+
+mov ax, 30;v
+push ax
+mov ax, 11;h
+push ax ;
+mov ax, 4;c
+push ax
+mov ax, intro
+push ax
+push word [intolen]
+call printstr
+
+mov ax, 30;v
+push ax
+mov ax, 13;h
+push ax ;
+mov ax, 6;c
+push ax
+mov ax, name
+push ax
+push word [namelen]
+call printstr
+
+
+mov ah,0
+int 16h
+call clrscr
+;first 
+mov ax, 24;v
+push ax
+mov ax, 8;h
+push ax ;
+mov ax, 2;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 28;v
+push ax
+mov ax, 8;h
+push ax ;
+mov ax, 3;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 32;v
+push ax
+mov ax, 8;h
+push ax ;
+mov ax, 4;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 36;v
+push ax
+mov ax, 8;h
+push ax ;
+mov ax, 5;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 40;v
+push ax
+mov ax, 8;h
+push ax ;
+mov ax, 6;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+;2nd 
+
+mov ax, 24;v
+push ax
+mov ax, 10;h
+push ax ;
+mov ax, 6;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 28;v
+push ax
+mov ax, 10;h
+push ax ;
+mov ax, 5;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 32;v
+push ax
+mov ax, 10;h
+push ax ;
+mov ax, 4;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 36;v
+push ax
+mov ax, 10;h
+push ax ;
+mov ax,3 ;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 40;v
+push ax
+mov ax, 10;h
+push ax ;
+mov ax, 1;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+;3rd
+
+mov ax, 24;v
+push ax
+mov ax, 12;h
+push ax ;
+mov ax, 4;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 28;v
+push ax
+mov ax, 12;h
+push ax ;
+mov ax, 2;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 32;v
+push ax
+mov ax, 12;h
+push ax ;
+mov ax, 4;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 36;v
+push ax
+mov ax, 12;h
+push ax ;
+mov ax, 6;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+mov ax, 40;v
+push ax
+mov ax, 12;h
+push ax ;
+mov ax, 7;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+;4th
+
+mov ax, 24;v
+push ax
+mov ax, 14;h
+push ax ;
+mov ax, 7;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 28;v
+push ax
+mov ax, 14;h
+push ax ;
+mov ax, 6;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 32;v
+push ax
+mov ax, 14;h
+push ax ;
+mov ax, 3;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 36;v
+push ax
+mov ax, 14;h
+push ax ;
+mov ax, 6;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 40;v
+push ax
+mov ax, 14;h
+push ax ;
+mov ax, 5;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+;5th
+
+mov ax, 24;v
+push ax
+mov ax, 16;h
+push ax ;
+mov ax, 2;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 28;v
+push ax
+mov ax, 16;h
+push ax ;
+mov ax, 7;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 32;v
+push ax
+mov ax, 16;h
+push ax ;
+mov ax, 4;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 36;v
+push ax
+mov ax, 16;h
+push ax ;
+mov ax, 6;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+mov ax, 40;v
+push ax
+mov ax, 16;h
+push ax ;
+mov ax, 7;c
+push ax
+mov ax, mes1
+push ax
+push word [len1]
+call printstr
+
+;lives 
+
+mov ax, 32;v
+push ax
+mov ax, 22;h
+push ax ;
+mov ax, 5;c
+push ax
+mov ax, lives
+push ax
+push word [liveslen]
+call printstr
+;over 
+mov ah,0
+int 0x16
+call movement
+mov ah,0
+int 16h
+call clrscr
+mov ax, 31;v
+push ax
+mov ax, 12;h
+push ax ;
+mov ax, 12;c
+push ax
+mov ax, over
+push ax
+push word [overlen]
+call printstr
+mov ax, 0x4c00
+int 0x21
