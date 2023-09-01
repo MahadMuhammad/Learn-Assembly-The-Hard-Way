@@ -1,0 +1,133 @@
+         *
+        ***
+       *****
+      *******
+     ********* 
+
+.MODEL SMALL
+.STACK 100H
+.DATA
+STAR DB ?
+BLANK DB ?
+.CODE 
+MAIN PROC
+    MOV CX,5		;outer loop run 5 times
+   MOV BX,1
+    
+   L1:
+    PUSH CX	; it store outer loop which is 5
+    
+    
+   L2:
+    MOV AH,2
+    MOV DL,32		;tahir this block for space	32 for space once time
+    INT 21H
+    LOOP L2
+    
+    
+    MOV CX,BX		;Bx=5
+   L3:
+    MOV AH,2
+    MOV DL,'*'		;tahir this block for  * once time ------>3;5;7
+    INT 21H
+    LOOP L3
+
+
+    ;tahir this is for newline (use 10 or 0ah)
+    MOV AH,2
+    MOV DL,10
+    INT 21H
+  ;tahir this is for carry return( use 13 or 0dh)
+    MOV DL,13
+    INT 21H
+
+    ;it add or inc 2 stars more in second line
+    INC BX		
+    INC BX
+    
+    POP CX		;it out the stored cx one by one
+    LOOP L1
+    
+    ---------------------------------------------------------
+   
+     ********* 
+      *******
+       *****
+        ***
+         *    
+    MOV CX,4
+    MOV BH,7
+    MOV BL,2
+    
+    MOV STAR,BH			;star=7
+    MOV BLANK,BL			;blank=2
+    
+   L4:
+    CMP BLANK,0
+    JE L5			;jump if equl
+
+;tahir this block for space	32 for space once time
+    MOV AH,2
+    MOV DL,32
+    INT 21H
+
+
+    DEC BLANK
+ 
+    JMP L4
+    
+   L5:
+    MOV AH,2
+    MOV DL,'*'		;tahir this block for  * once time ------>4;;7
+    INT 21H
+
+
+    DEC STAR		; 7 sy 6 , 6 sy 5 etc.....
+    CMP STAR,0		;star=7 it is not equal to 0
+    JNE L5			;jump if not equl
+  L6:  
+   
+    ;tahir this is for newline (use 10 or 0ah)
+    MOV AH,2
+    MOV DL,10
+    INT 21H
+   
+  ;tahir this is for carry return( use 13 or 0dh)
+    MOV DL,13
+    INT 21H
+
+;it sub or dec 2 stars more in second line
+  
+    DEC BH
+    DEC BH
+
+    MOV STAR,BH		
+    
+    INC BL			;inc blank space
+    MOV BLANK,BL	
+    
+    LOOP L4
+    
+
+
+    
+    EXIT:
+    MOV AH,4CH
+    INT 21H
+
+    MAIN ENDP
+END MAIN
+         
+         
+
+
+         *
+        ***
+       *****
+      *******
+     *********
+     ********* 
+      *******
+       *****
+        ***
+         *     
